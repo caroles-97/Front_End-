@@ -1,0 +1,45 @@
+/* font weight é o peso da fonte  
+
+a - link*/
+
+a {
+    font-family: Roboto, Calibri;
+    font-size: 18px;
+    font-weight: 700;
+    color:#c4bfed; 
+    text-decoration: none;
+    text-transform:uppercase;
+    }
+
+    /* TEXT-DECORATION::
+    underline - igual o sublinhado,
+    overline - fica sublinhado por cima, 
+    line-thruough - riscado, 
+    none - sem sublinhado
+        
+    TEXT-transform: posso deixar todo o texto em caps lock, ou minuscula.
+    lowercase, capitalize (1ª letra de cada palavra maiuscula), uppercase
+    
+    TEXT-ALIGN: 
+    center, justify (para alinhar na pag)
+    text-indent:parágrafo
+    line-height:alura da linha
+
+    */
+
+p { font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color:blueviolet;
+    text-align: justify;
+    text-indent: 40px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+/* Sombreamento + posicionamento + borradinho  */
+h1 {
+    text-shadow: 2px 2px 3px aquamarine;
+
+}
