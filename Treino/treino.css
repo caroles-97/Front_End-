@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Story Script", cursive ;
+}
+
+header {    /*header é o cabeçalho e aqui estará o menu de navegação*/
+    text-align: center;
+    background-color: rgb(129, 216, 190);
+    padding: 15px 0;
+}
+
+a {
+    font-size: 30px;
+    color: #db25eb;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 50px;
+    margin: 0 10;
+}
+
+a i { 
+    font-size: 25px;
+    color: rgb(255, 247, 250); 
+    margin-right: 20px;
+}
+
+/* agora vamos reduzir o tamanho da img.  pixel é medida absoluta. % varia a depender do ponto de referência
+*/
+img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;    
+    /* object-fit: contain; img contem o tamanho dela, mas fica sobrando espaço
+    cover - corta a img para não achatar  . É possível checar isso dando zoom na img*/
+}
+
+h1{
+    font-size: 40px;
+    color: rgb(255, 0, 212);
+    text-align: center;
+    margin: 40px 0 30px;
+}
+
+h2{
+    font-size: 32px;
+    color: rgb(19, 193, 224);
+    margin: 50px 40px 30px;
+}   
+
+p {
+    font-size: 20px;
+    color: rgb(153, 24, 240);
+    text-align: match-parent;
+    margin: 20px 40px 30px;
+}
+div {
+    text-align: center;
+}
+
+div img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    margin: 10px;
+}
