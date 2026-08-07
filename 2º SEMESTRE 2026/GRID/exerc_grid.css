@@ -3,6 +3,8 @@
 #grade {
     display: grid; /* informo que é grid*/
     grid-template-columns: 40% auto 20%;
+    align-content: center;  /*centralizar*/
+    justify-content: center;
     grid-template-rows: repeat(100px);  /* repetir 3 linhas com 100px*/
     height: 100vh;
     width: 100vw;
