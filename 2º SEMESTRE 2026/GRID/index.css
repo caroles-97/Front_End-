@@ -1,0 +1,81 @@
+.grid{
+    display: grid;
+    /* grid-template-columns: 300px 100px;
+    grid-template-rows: 40px 100px; */
+    grid-template-columns: 2fr 1fr; /*o total da tela é a somatoria - % da tela em relação a qtde de colunas */
+    grid-template-rows: 3fr 1fr; /*% da tela em relação a linhas */
+
+    /* altura da tela - vh viewport (tela)*/
+    height: 100vh;
+
+    /* espaçamento das colunas e linhas */
+    gap: 10px; 
+    /* row-gap:30px; espaçamento linha separado
+    colunm-gap: 30px;  - espaçamento coluna separado*/
+
+}
+
+/* filhos - HTML DELE ESTÁ COMENTADO desse e do de cima */
+.grid>*{
+    /* /* todos os filhos do grid.* Seleciona todos os filhos do elemento da esquerda */
+    
+    border: 1px solid #000;
+    border-radius: 10px;
+
+} 
+
+/* Chamando id GRADE. Como é elemento pai, vamos usar o grid */
+#grade {
+    display: grid;
+    grid-template-columns: 20% auto 15%;   /*evitar o auto na primeira e última coluna*/
+    grid-template-rows: 100px 1fr 1fr 75px;
+    height: 100vh;
+    width: 100vw;  /*100% da largura da tela*/
+    gap: 10px;
+    grid-template-areas:  /* desenhar a distribuição dos elementos*/
+    "nav header header" 
+    "nav produtos publicidade" 
+    "nav servicos publicidade" 
+    "nav footer footer"     /*cada "" representa 1 linha. Dentro da abertura e fechamamento das ", vamos chamar os elementos */
+    ;
+
+}
+
+#grade>*{
+    border:1px solid #000;
+    background-color: pink;
+    border-radius: 10px;  /*arredondar as bordas*/
+
+    /* padding - borda interna, preenchimento*/
+    padding: 20px;
+
+    /* margin - borda externa */
+}
+
+header {
+    grid-area: header; 
+
+}
+
+/* temos que chamar cada seção individualmente. Chamando tag por tag, para nomear os elementos */
+
+section#produtos {
+    grid-area: produtos;
+    
+}
+section#servicos {
+    grid-area: servicos;
+
+}
+
+nav {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: publicidade;
+}
+
+footer {
+    grid-area: footer;
+}

@@ -1,0 +1,51 @@
+/* Chamar o ID grade usando o # */
+
+#grade {
+    display: grid; 
+    grid-template-columns: 40% auto 20%;
+    grid-template-rows: 100px;  /* fique c duvida aqui como prosseguir*/
+    height: 100vh;
+    width: 100vw;
+    gap:30px;
+
+    grid-template-areas: /*organizar as areas*/
+    "verdeagua h20"
+    "verdeagua laranja verdeescuro"
+    "rosa laranja verdeclaro"
+    ;
+}
+
+#grade>*{
+    border: 1px solid #050404;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+/* Chamar os elementos */
+
+header {
+    grid-area:h20;
+    background-color: aquamarine;
+}
+
+section#verdeagua{
+    grid-area: verdeagua;
+    background-color: greenyellow;
+}
+section#laranja{
+    grid-area: laranja;
+    background-color: orangered;
+}
+section#rosa{
+    grid-area: rosa;
+    background-color: pink;
+}
+section#verdeescuro{
+    grid-area: verdeescuro;
+    background-color: green;
+}
+section#verdeclaro{
+    grid-area: verdeclaro;
+    background-color: greenyellow;
+}
+
