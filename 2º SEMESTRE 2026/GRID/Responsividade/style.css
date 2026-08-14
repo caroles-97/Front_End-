@@ -1,0 +1,107 @@
+/* RESPONSIVIDADE É PARA RESPONDER AO TAMANHO DA TELA */
+
+
+/* @media é uma condição (if) -- AQUI CRIAMOS REGRA PARA APLICAÇÃO 
+body {
+    background-color: pink;
+}
+
+@media only screen and (min-width: 769px){
+    body {
+        background-color:blue;
+    }
+}
+
+@media only screen and (min-width: 1279px){
+    body {
+        background-color: red;
+    }
+}
+
+@media only screen and (min-width: 780px) and (max-widt: 1278px){
+    body {
+        background-color: yellow;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    body {
+        background-color: green;
+    }
+} */
+
+
+
+/* -------------------------- */
+
+
+/* MOBILE first */
+header {
+    grid-area: header;
+    background-color: aliceblue;
+}
+
+
+/* NAV - navegação toda - menu, contato etc */
+nav {
+    grid-area: nav;
+    background-color: yellow;
+}
+
+main {
+    grid-area: main;
+    background-color: palevioletred;
+}
+
+/* Navegação de topo e inferior - 'voltar ao topo' */
+aside {
+    grid-area: aside;
+    background-color: orangered;
+}
+
+footer {
+    grid-area: footer;
+    background-color: navajowhite;
+}
+.container{ /* CLASSE DA DIV*/
+    display: grid;  /*tipo de layout: grid. A partir do display grid, podemos usar as demais propriedades abaixo*/
+    grid-template-columns: 100px auto 100px; /*grade de colunas, pode ser em fr ou % tb. PARA MOBILE É MAIS COMUM 1 COLUNA*/
+    grid-template-rows: repeat(6,100px);  /*6 linhas todas de 100px*/
+    gap: 10px;
+    grid-template-areas:
+    "header header header"
+    "nav main aside"
+    ". footer ."  /* . = none*/
+}
+
+
+/* ----------------------------------------------- */
+
+/* TABLET */
+/* PRECISAMOS TRABALHAR COM CONDIÇÃO P TABLET */
+
+@media screen and (min-width:768px){
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "nav nav header header"
+        "nav nav main main"
+        "aside footer footer .";
+    }    /*chamar quem quero mudar NO TABLET*/
+
+}
+
+/* ----------------- */
+/* DESKTOP */
+
+@media screen and (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "main main aside"
+        "footer footer footer";
+    }
+}
+    

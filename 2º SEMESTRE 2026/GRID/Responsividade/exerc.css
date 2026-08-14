@@ -1,0 +1,55 @@
+/* MOBILE */
+body {
+    background-color: #fff;
+    margin:0;
+    box-sizing: border-box ;  /*padronizar as bordas*/
+}
+
+header {
+    grid-area: header;  /* defino o nome aqui para chamar no grid-template-area*/
+    background-color: aquamarine;
+}
+
+main {
+    grid-area: content;  /*posso colocar o nome que eu quiser*/
+    background-color: palevioletred;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: yellowgreen;
+}
+
+.container {  /*chamando classe da div*/
+    display: grid;
+    height: 100dvh; /*altura do container*/
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 60% 20%;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "content"
+    "sidebar";
+}
+.container >* {   /*AQUI ESTAMOS APLICANDO AS REGRAS NOS FILHOS. REGRA APLICA-SE NOS ELEMENTOS DENTRO DO CONTAINER   * SIGNIFICA TODOS, TODOS OS FILHOS QUE ESTÃO A ESQUERDA*/
+    border-radius: 30px;
+    padding: 40px; /*padding maior que o border radius para o conteudo ir para dentro*/
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: gray ;  /*mudando cor da fonte*/
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 1020px) {
+    .container {
+        max-width: 1100px ; /*largura maxima*/
+        grid-template-columns: 70% 30%;
+        grid-template-areas: 
+        "header header"
+        "content sidebar"
+        "content sidebar";
+    }
+}
