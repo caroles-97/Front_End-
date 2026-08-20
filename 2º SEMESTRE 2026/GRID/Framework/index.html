@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" -->
+        <!-- integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="styleBootstrap.css">
+
+    <style>
+        /* divs dentro de row são padronizadas assim: */
+        
+        .row>div {
+            margin-top: 10px;
+            background-color: #c6e6bc;
+            border: 1px solid #06f5fd;
+            margin-top: 10px;
+        }
+        /* id especial */
+        #especial {
+            background: #f717eb;
+        }
+        /* id da linha SOBREPÕE A DIV  */
+        #diferente>div { 
+            background-color: #7a85be;
+        }
+        
+    </style>
+    
+    </head>
+<body>
+    <!-- div.container>div.row>div.col*3 -->
+     <!-- div pai, recebe classe container. div filha tem colunas. -->
+
+    <!-- <div class="container-fluid"> -->
+
+    <div class="container">
+        <!-- essa div container vai se comportar como linha com 12 quadrados  -->
+        <div class="row">
+            <div class="col-md-1"> O </div>
+            <div class="col-md-1"> I </div>
+            <div class="col-md-1"> ! </div>
+            <div class="col-md-1"> ! </div>
+            <div class="col-md-1"> ! </div>
+            <div class="col-md-1"> ! </div>
+            <div class="col-md-1"> ! </div>
+            <div class="col-md-1"> ! </div>
+            <div class="col-md-1"> ! </div>
+            <div class="col-md-1"> ! </div>
+            <div class="col-md-1"> ! </div>
+            <div class="col-md-1" id="especial"> ! </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8"> TESTE </div>
+            <div class="col-md-4"> teste 2 </div>
+           
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"> ******  </div>
+            <div class="col-md-4"> ******  </div>
+            <div class="col-md-4"> ******  </div>
+         
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row" id="diferente">
+            <div class="col-md-6"> footer</div>
+            <div class="col-md-6"> footer</div>
+           
+        </div>
+    </div>
+
+
+</body>
+</html>
