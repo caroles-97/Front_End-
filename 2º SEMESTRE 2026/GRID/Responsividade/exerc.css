@@ -22,8 +22,10 @@ aside {
 
 .container {  /*chamando classe da div*/
     display: grid;
+    margin: 0 5%;  /* 0  de cima e baixo , 5% o restante das margens*/
+    margin-top: 20px;   /*margin somente para cima */
     height: 100dvh; /*altura do container*/
-    grid-template-columns: 100%;
+    /* grid-template-columns: 100%; */
     grid-template-rows: 20% 60% 20%;
     gap: 20px;
     grid-template-areas: 
@@ -45,13 +47,17 @@ aside {
 
 @media screen and (min-width: 1020px) {
     .container {
-        max-width: 1100px ; /*largura maxima*/
+        max-width: 1200px ; /* largura maxima */
         grid-template-columns: 70% 30%;
         grid-template-areas: 
         "header header"
         "content sidebar"
         "content sidebar";
+        margin: 0 auto;
+            /* 0  de cima e baixo , E D automatico*/
+        margin-top: 20px;
+            /*margin somente para cima */
     }
 }
 
-/* DÚVIDA: PORQUE NÃO ESTÁ PADRONIZADO O FUNDO BRANCO NO DESKTOP */
+/* ATIVIDADE JÁ CORRIGIDA PELO PROF 27/8/26*/
