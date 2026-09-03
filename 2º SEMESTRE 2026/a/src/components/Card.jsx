@@ -29,7 +29,7 @@ const Card = () => {
                 {/* texto cinza, margem topo */}
 
 
-                <button className="mt-5 w-full bg-blue-500 text-white  py-3  rounded-lg  text-lg font-semibold hover: bg-blue-950 transition duration-300">
+                <button className="mt-5 w-full bg-blue-500 text-white  py-3  rounded-lg  text-lg font-semibold hover:bg-blue-950 transition duration-300">
                     Saiba mais
                 </button>
 
