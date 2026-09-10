@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Repsonsividade e animações em Tailwind</title>
+
+    <!-- Tailwind é baseado em JS, por isso usamos o 'script' p chamar ele -->
+    <!-- Não chamamos como link src etc, porque ele NÃO É ARQUIVO ESTÁTICO -->
+    <!-- importamos o Tailwind pelo url do site: https://tailwindcss.com/docs/installation/play-cdn -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- ou -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
 </head>
-<body>
+<body class="m-4">
+    <!-- margem geral 4, em todos os lados -->
+
+    <!-- BREAKPOINTS DO TAILWIND -->
+    <!-- SM, MD, LG, XL 2XL -->
+    <div class="bg-red-500 md:bg-green-500 lg:bg-blue-500"> Cor muda com o tamanho da tela</div>
+    <!-- Criada responsividade usando o tailwind, chamamos várias vezes o breakpoint -->
+    <!-- Para caso editar dentro do breakpoint, usar @apply -->
+    
+    <!-- SISTEMA DE LAYOUT E GRID. Usaremos muito para trabalhar com responsividade -->
+
+
+    <!-- div>div{Item$3} -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+        <!-- elemento pai aplicando layout de grid nos elementos filhos. 
+        como não tem breakpoint, estou adotando como padrão os elementos. 
+        Margem top: 4 -->
+        <div class="bg-gray-200 p-4">Item1</div>
+        <div class="bg-gray-200 p-4">Item2</div>
+        <div class="bg-gray-200 p-4">Item3</div>
+    </div>
+
+
+    <!-- ANIMAÇÕES:  -->
+
+    <!-- div sem conteúdo, preciso criar uma animação para enxergar ela -->
+    <div class="w-16 h-16 bg-purple-400 mt-8 animate-bounce"></div>
+    <div class="w-16 h-16 bg-pink-200 mt-8 animate-spin"></div>
+    <div class="w-16 h-16 bg-purple-400 mt-8 animate-pulse"></div>
+    <div class="w-16 h-16 bg-purple-400 mt-8 animate-ping"></div>
+    <div class="w-16 h-16 bg-purple-400 mt-8 animate-none"></div> <!-- animação : desativada  -->
+
+    <!-- Criando div pai -->
+    <div class="max-w-sm mx-auto mt-10 p-6 bg-white rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-500">
+        <!-- largura max pequena (padronizado p todas as telas), margem automatica para que fique centralizado no eixo x, margem top 10 (max 96), padding 6 (margem interna)
+        hover: quando o usuário passar o mouse - sombreamento, transforma numa escala maior num intervalo de 5s  -->
+
+        <h2 class="text-xl font-bold text-gray-900 ">Título do Card</h2>
+        <p class="mt-2 text-purple-400">Esse é um exemplo de card animado e responsivo com Tailwind CSS.</p>
+        <!-- margem top 2 para ficar um pouco longe do h2.  -->
+    </div>
+
+    <div
+        class="max-w-sm mx-auto mt-10 p-6 bg-pink-400 rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-500">
+        <!-- largura max pequena (padronizado p todas as telas), margem automatica para que fique centralizado no eixo x, margem top 10 (max 96), padding 6 (margem interna)
+        hover: quando o usuário passar o mouse - sombreamento, transforma numa escala maior num intervalo de 5s  -->
+    
+        <h2 class="text-xl font-bold text-white ">Título do Card</h2>
+        <p class="mt-2 text-pink-700">Esse é um exemplo de card animado e responsivo com Tailwind CSS.</p>        
+    </div>
+
+    <div
+        class="max-w-sm mx-auto mt-10 p-6 bg-pink-400 rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-500
+        hover:bg-[linear-gradient(45deg,#2563eb,#9333ea)]
+        bg-[length:220%_220%]
+        bg-[position:0%_100%]
+        hover:bg-[position:100%_0%]
+        transition-[background-position]">
+        <!-- largura max pequena (padronizado p todas as telas), margem automatica para que fique centralizado no eixo x, margem top 10 (max 96), padding 6 (margem interna)
+            hover: quando o usuário passar o mouse - sombreamento, transforma numa escala maior num intervalo de 5s  -->
+    
+        <h2 class="text-xl font-bold text-white ">Título do Card</h2>
+        <p class="mt-2 text-pink-700">Esse é um exemplo de card animado e responsivo com Tailwind CSS.</p>
+    </div>
+
+   
+
     
 </body>
 </html>
