@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página em Darkside</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Usar config do tailwind e o modo DARK vai ser ativado através das classes. NÃO ATRAVÉS DO NAVEGADOR. INFORMAÇÃO PARA O NAVEGADOR -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+
+
+<!-- Começamos personalizando o body para a alternância - MODO LIGHT BG WHITE. MODO DARK BG GREEY-->
+<body class="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen flex flex-col items-center justify-center">
+<!--    modo claro - texto preto;    modo dark background cinza - texto branco -->
+
+    <button id="toogle-dark" class="mb-6 px-4 py-2 bg-pink-300 text-white rounded">
+        <!-- Criado botão (QUEM SERÁ ATIVADO) com id toogle-dark    margem bottom  6, eixo x 4, eixo y 2     rounded - borda arredondada -->
+    Alternar Dark Mode
+    </button>
+<!-- Toogle: vai ativar o dark -->
+
+    <div class="p-6 rounded bg-gray-100 dark:bg-gray-800">
+        <!-- padding - margem interna + alternância de backgrounds modo claro VS DARK  -->
+        <p> Este card muda com o dark mode</p>
+    </div>
+
+    <script>
+        const btn = document.getElementById('toogle-dark');
+        btn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            // acesso document, que tem o documentElement -> classList e que tem alternância ('toggle') para dark
+        });
+    </script>
+
+</body>
+</html>

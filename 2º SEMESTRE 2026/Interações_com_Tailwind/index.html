@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interações com Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-4">
+    <button class="bg-blue-500 hover:bg-blue-700 focus:ring-4 active:bg-blue-900 text-white font-bold py-2 px-4 rounded"> 
+        Interaja comigo
+    </button>
+
+    
+    <div class="group p-4 bg-gray-100 hover:bg-gray-200 rounded-lg mt-4 max-w-md">
+        <!-- group ordena o 'resto'. Colocando larguda máxima 'médio' -->
+        <h2 class="group-hover:text-blue-500 text-lg font-bold">
+            Título
+        </h2>
+        <p class="group-hover:underline">
+            Texto ao passar o mouse
+        </p>
+
+    </div>  
+    
+    <div class="mt-4">
+        <input type="checkbox" id="mostrar" class="peer hidden">
+        <!-- input é a caixinha. Para ela não aparecer, usamos 'peer hidden'. Peer é um "par", tem funcionalidade como se fosse o "group" mas somente para 2-->
+
+        <label for="mostrar" class="cursor-pointer text-pink-600">
+            <!-- cursor - pointer: muda o cursor -->
+            Mostrar mensagem
+        </label>
+        <!-- label é associada a mensagem do input -->
+        <!-- for usado p associar a msg ao input - PORTANTO PRECISA SER O MESMO ID do Input -->
+
+        <div class="mt-2 hidden peer-checked:block text-yellow-400">Checkbox marcado!☆*: .｡. o(≧▽≦)o .｡.:*☆ 🎉✨✨</div>
+        <!-- Windowns + . para abrir os emojis -->
+        <!-- Quando o par dele estiver marcado, a div dele aparece (block - aparece).-->
+    </div>
+</body>
+</html>
