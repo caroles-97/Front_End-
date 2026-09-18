@@ -21,6 +21,7 @@
 
     <button id="toogle-dark" class="mb-6 px-4 py-2 bg-pink-300 text-white rounded">
         <!-- Criado botão (QUEM SERÁ ATIVADO) com id toogle-dark    margem bottom  6, eixo x 4, eixo y 2     rounded - borda arredondada -->
+         <!-- botão para alternar o modo dark -->
     Alternar Dark Mode
     </button>
 <!-- Toogle: vai ativar o dark -->
@@ -31,10 +32,22 @@
     </div>
 
     <script>
+        // botão “Alternar Dark Mode” ligar e desligar o modo escuro da página.
         const btn = document.getElementById('toogle-dark');
         btn.addEventListener('click', () => {
             document.documentElement.classList.toggle('dark');
             // acesso document, que tem o documentElement -> classList e que tem alternância ('toggle') para dark
+
+            // const (nomeDaVariável) = procura no HTML elemento que tem o id 'toogle-dark' e atribui a variável btn. 
+            // addEventListener - Quando alguém clicar no botão, execute alguma ação.
+            // Ação = click. 
+            // Ao click, será executada a função (arrow function) que alterna a classe dark no documentElement (html). “Quando o usuário clicar, faça isso...”.
+
+
+            // document.documentElement = acessa a tag html do documento.“vou mexer na estrutura principal da página”.
+
+            //classList.toggle('dark') = classList é a lista de classes do elemento. toggle('dark') = alterna a classe dark. Se tiver, remove; se não tiver, adiciona.
+
         });
     </script>
 
