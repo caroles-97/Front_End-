@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interações com Tailwind</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Animação em JS com Tailwind -->
+    <!-- <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        keyframes: {
+                            fade: {
+                                '0%': {opacity:'0'}, 
+                                '100%': {opacity:'1'},
+                            },
+                            wiggle: {
+                                '0%, 100%': {transform: 'rotate(-3deg)'}, 
+                                '50%': {transform: 'rotate(3deg)'},
+                            },
+                        },
+                        animation: {
+                            fade: 'fade 1s ease-in-out infinite',
+                            // tempo total da animação
+                            wiggle: 'wiggle 0.5s ease-in-out infinite'
+                        }
+    
+                    }
+                }
+                // dentro da chave, passamos outro objeto. Criando animações com tailwind + JS
+            }
+        </script> -->
+
+
+        <!-- Animação em CSS com Tailwind -->
+        <style type="text/tailwindcss">
+            @layer utilities { /*vamos usar uma camada de utilidades*/
+                @keyframes fade { /*@keyframes: CSS, determina a passagem de tempo da animação, personalizar as animações*/
+                    0% {opacity: 0;}
+                    100% {opacity:1;}
+                }
+                @keyframes wiggle {
+                    0%, 100% { transform: rotate(-3deg); }
+                    50% {transform: rotate(3deg);}
+                }
+                .animate-fadeCaroles {
+                    animation: fade 1s ease-in-out infinite;
+                }
+                .animate-wiggle {
+                    animation: wiggle 0.5s ease-in-out infinite;
+                }
+            }
+
+        </style>
 </head>
 <body class="m-4">
     <button class="bg-blue-500 hover:bg-blue-700 focus:ring-4 active:bg-blue-900 text-white font-bold py-2 px-4 rounded"> 
@@ -59,17 +108,15 @@
         G
     </div>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    keyframes
 
-                }
-            }
-            // dentro da chave, passamos outro objeto
-        }
-    </script>
+<!-- Animações 1/10/26 -->
+    <div class="p-4 bg-green-300 rounded w-20 animate-fade">
+        Fade
+    </div>
+    <button class="animate-wiggle mt-4">Treme</button>
+    <div class="animate-wiggle w-40 h-40 bg-amber-500 rounded mt-4"> Treme</div>
+    <div class="animate-fade w-40 h-40 bg-pink-400 rounded-full mt-4"> Animação Fade </div>
+
 
 
 
