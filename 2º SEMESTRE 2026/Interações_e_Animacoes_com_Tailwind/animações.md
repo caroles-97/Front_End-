@@ -1,7 +1,7 @@
 ~~~~Animações no Tailwind é feito com JS ou CSS~~~~
 Inserimos dentro do <head>
 
-Tailwind + JS 
+🧁🌅Animação Tailwind + JS 
 
 <script>
         tailwind.config = {
@@ -30,9 +30,10 @@ Tailwind + JS
     </script>
 
 
-     <!-- Animação em CSS com Tailwind -->
+     🎇✨O(∩_∩)O <!-- Animação em CSS com Tailwind -->
+     
         <style type="text/tailwindcss">
-            @layer utilities { /*vamos usar uma camada de utilidades*/
+            @layer utilities     *vamos usar uma camada de utilidades*
                 @keyframes fade { /*@keyframes: CSS, determina a passagem de tempo da animação, personalizar as animações*/
                     0% {opacity: 0;}
                     100% {opacity:1;}
