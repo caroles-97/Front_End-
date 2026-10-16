@@ -20,16 +20,17 @@ const Contato = () => {
     //   const [valor, funçãoQueTrocaOValor] = useState(valorInicial);
     //
     // - nome      -> o que está guardado (começa vazio: '')
-    // - SetNome   -> a função que troca o valor guardado
+    // - setNome   -> a função que troca o valor guardado
     // - useState('') -> "crie uma memória começando com texto vazio"
     //
     // Quando a memória muda, o React redesenha a tela sozinho.
     //
-    // ⚠️ ATENÇÃO: aqui está escrito "SetNome" (S MAIÚSCULO),
-    // mas mais abaixo o código usa "setNome" (s minúsculo).
-    // Para o JavaScript, maiúscula e minúscula são nomes DIFERENTES.
-    // Por isso a página dá erro ao digitar no campo Nome ou ao enviar.
-    const [nome, SetNome] = useState ('');
+    // 💡 DICA: o nome da função precisa ser escrito IGUAL em todo o arquivo.
+    // Aqui ela é "setNome" (s minúsculo) e é usada com o mesmo nome
+    // no onChange do campo Nome e no handleSubmit.
+    // Para o JavaScript, maiúscula e minúscula são nomes DIFERENTES:
+    // "SetNome" e "setNome" seriam duas coisas distintas (e dariam erro).
+    const [nome, setNome] = useState ('');
     // memória do e-mail
     const [email, setEmail] = useState('');
     // memória da mensagem
@@ -57,10 +58,10 @@ const Contato = () => {
   return (
     // p-8 -> espaço interno | max-w-md -> largura limitada | mx-auto -> centralizado
     <div className='p-8 max-w-md mx-auto'>
-        {/* Título da página.
-            Obs.: "tex-pur" não é uma classe que existe no Tailwind,
-            por isso o título não fica roxo. O certo seria "text-purple" + "-600" (tudo junto, sem as aspas e o +). */}
-        <h1 className='text-4xl font-bold tex-pur mb-6'>
+        {/* Título da página: grande (text-4xl), negrito (font-bold)
+            e roxo claro (text-purple-400). O número (400) é a "força" da cor:
+            quanto maior, mais escura (ex.: 600 é mais escuro que 400). */}
+        <h1 className='text-4xl font-bold text-purple-400 mb-6'>
             Contato
         </h1>
 
