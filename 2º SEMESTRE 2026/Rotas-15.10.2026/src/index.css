@@ -1,1 +1,3 @@
+/* index.css — Esta única linha carrega o Tailwind no projeto.
+   É ela que faz classes como bg-blue-600 e text-4xl funcionarem. */
 @import 'tailwindcss';
